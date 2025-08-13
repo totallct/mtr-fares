@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+  font-size: 1rem;
+  width: 20rem
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 0;
+}
+
+.suggestions {
+  display: none;
+  width:  100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+  list-style: none;
+}
+
+.suggestions li {
+  padding: 6px 8px;
+  cursor: pointer;
+  line-height: 1.4;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.suggestions li:hover {
+  background: #f0f0f0;
+}
+
+.line-badge {
+  display: inline-block;
+  padding: 0 6px;
+  margin-left: 4px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.line-ael { background: #00888A; }
+.line-tcl { background: #f58220; }
+.line-isl { background: #007DC5; }
+.line-twl { background: #ED1D24; }
+.line-ktl { background: #00a650; }
+.line-eal { background: #53B7E8; }
+.line-tml { background: #923011; }
+.line-tkl { background: #7D499D; }
+.line-sil { background: #BAC429; color: #000; }
+.line-drl { background: #F173AC; }
+
+#fromBadges,
+#toBadges {
+  display: block;
+  margin: 4px 0 10px;
+}
+
+#fareResult {
+  margin-top: 2rem;
+  padding: 1.8rem;
+  background: #e6f2ff;
+  border: 2px solid #007DC5;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #003366;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
