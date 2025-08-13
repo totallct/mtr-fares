@@ -70,8 +70,25 @@ function showFare() {
   }
 }
 
+function resetInput() {
+  const fareResult = document.getElementById('fareResult');
+  const fromInput = document.getElementById('fromInput');
+  const toInput = document.getElementById('toInput');
+  const fromBadges = document.getElementById('fromBadges');
+  const toBadges = document.getElementById('toBadges');
+
+  fareResult.addEventListener('click', function() {
+    fromInput.value = '';
+    toInput.value = '';
+    fromBadges.innerHTML = '';
+    toBadges.innerHTML = '';
+    fareResult.textContent = 'Adult Fare';
+  });
+}
+
 (async function init() {
   await loadData();
   setupSearch('fromInput', 'fromSuggestions', showFare);
   setupSearch('toInput', 'toSuggestions', showFare);
+  resetInput();
 })();
