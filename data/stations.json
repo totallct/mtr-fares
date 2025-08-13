@@ -363,38 +363,6 @@
     ]
   },
   {
-    "id": 44,
-    "en": "Hong Kong",
-    "zh": "香港",
-    "lines": [
-      "ael"
-    ]
-  },
-  {
-    "id": 45,
-    "en": "Kowloon",
-    "zh": "九龍",
-    "lines": [
-      "ael"
-    ]
-  },
-  {
-    "id": 46,
-    "en": "Tsing Yi",
-    "zh": "青衣",
-    "lines": [
-      "ael"
-    ]
-  },
-  {
-    "id": 47,
-    "en": "Airport",
-    "zh": "機場",
-    "lines": [
-      "ael"
-    ]
-  },
-  {
     "id": 48,
     "en": "Yau Tong",
     "zh": "油塘",
@@ -460,14 +428,6 @@
     "zh": "迪士尼",
     "lines": [
       "drl"
-    ]
-  },
-  {
-    "id": 56,
-    "en": "AsiaWorld-Expo",
-    "zh": "博覽館",
-    "lines": [
-      "ael"
     ]
   },
   {

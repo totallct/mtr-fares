@@ -29,6 +29,8 @@ export async function processStations() {
     const zh = row['Chinese Name'] ?? row['ChineseName'] ?? '';
     const line = (row['Line Code'] ?? row['LineCode'] ?? '').toLowerCase();
 
+    if (line === 'ael') continue;
+
     if (!byId.has(id)) {
       byId.set(id, { id, en, zh, lines: new Set() });
     }
@@ -46,7 +48,7 @@ export async function processStations() {
 
   const stationsPath = path.join(dataDir, 'stations.json');
   fs.writeFileSync(stationsPath, JSON.stringify(stations, null, 2), 'utf-8');
-  console.log(`✅ Saved ${stations.length} unique stations → ${stationsPath}`);
+  console.log(`✅ Saved ${stations.length} unique stations (excluding AEL) → ${stationsPath}`);
 }
 
 export async function processFares() {
