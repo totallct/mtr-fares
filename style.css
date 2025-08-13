@@ -15,11 +15,11 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin: 1.8rem 0 0;
 }
 
@@ -31,7 +31,7 @@ input[type="text"] {
   border-radius: 4px;
   display: block;
   margin-bottom: 0;
-  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
 }
 
 .suggestions {
@@ -93,7 +93,7 @@ input[type="text"] {
 }
 
 #fareResult {
-  margin-top: 3rem;
+  margin-top: 2.2rem;
   padding: 1.5rem;
   background: #e6f2ff;
   border: 2px solid #007DC5;
