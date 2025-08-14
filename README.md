@@ -1,9 +1,14 @@
-# MTR Fares 🚇
-A simple tool to check and calculate Hong Kong MTR fares quickly.
+# MTR Fare Checker
 
-## 📖 Overview
-MTR Fares is for checking the Hong Kong MTR fare. It fetches fare information from GOV opendata and makes it easy to query costs between stations without manually searching the official fare table.
+A lightweight web app for checking adult fares between MTR stations in Hong Kong.
 
-## ✨ Features
-- 🔍 Station-to-station fare lookup
-- ⚡ Fast and lightweight — minimal dependencies
+## 🚀 Features
+
+- 🔍 Search for stations in English or Chinese
+- 🎫 View adult fare between any two stations
+- 🧭 Displays line badges for selected stations
+- ⚡ Fast, responsive interface with zero dependencies
+
+## 📦 Data Source
+
+This project uses official fare and station data from [DATA.GOV.HK](https://data.gov.hk/en/).
