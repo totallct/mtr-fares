@@ -1,0 +1,31 @@
+name: Fetch & Build JSON from MTR OpenData
+
+on:
+  schedule:
+    - cron: '0 20 1 * *'  # 4am on 2nd every month
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch & Convert CSV → JSON
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit and push JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          git commit -m "Auto-update from OpenData" || echo "No changes"
+          git push
