@@ -79,7 +79,7 @@ def process_fares() -> None:
     text = fetch_text(URLS["fares"])
     reader = csv.DictReader(io.StringIO(text))
 
-    fares: dict[str, dict[str, float | None]] = {}
+    fares: dict[int, dict[int, float | None]] = {}
     for row in reader:
         try:
             src_id = int(str(row.get("SRC_STATION_ID", "")).strip())
@@ -91,7 +91,6 @@ def process_fares() -> None:
             continue
 
         raw = row.get("OCT_ADT_FARE", "")
-        value: float | None
         try:
             value = float(str(raw).strip())
             if not math.isfinite(value):
@@ -99,9 +98,10 @@ def process_fares() -> None:
         except (TypeError, ValueError):
             value = None
 
-        if src_id not in fares:
-            fares[src_id] = {}
-        fares[src_id][dest_id] = value
+        a, b = sorted((src_id, dest_id))
+        if a not in fares:
+            fares[a] = {}
+        fares[a][b] = value
 
     out_path = DATA_DIR / "adult.json"
     with out_path.open("w", encoding="utf-8") as f:

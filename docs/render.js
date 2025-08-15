@@ -59,8 +59,12 @@ function showFare() {
   const toId   = +$('toInput').dataset.id;
   if (!Number.isInteger(fromId) || !Number.isInteger(toId)) return;
 
-  const fare = fares[fromId]?.[toId];
-  $('fareResult').textContent = fare !== undefined ? `$ ${fare.toFixed(2)}` : 'Error!';
+  const [a, b] = fromId < toId ? [fromId, toId] : [toId, fromId];
+  const fare = fares[a]?.[b];
+  $('fareResult').textContent =
+    fare !== undefined && fare !== null
+      ? `$ ${fare.toFixed(2)}`
+      : 'Error!';
 }
 
 function resetInput() {
