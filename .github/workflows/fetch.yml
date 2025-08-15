@@ -2,7 +2,7 @@ name: Fetch & Build JSON
 
 on:
   schedule:
-    - cron: '0 20 1 * *'  # monthly 2nd at 4am HKT
+    - cron: '17 3 2 * *'  # Monthly 2nd at 1117 HKT
   workflow_dispatch:
 
 jobs:
